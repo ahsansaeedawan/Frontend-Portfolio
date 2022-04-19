@@ -1,0 +1,159 @@
+@import '../../assets/scss/imports';
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  background: $Mercury url('../../assets/images/login-bg.png') no-repeat center
+    center / cover;
+}
+
+.login-logo {
+  // text-align: center;
+  // > img {
+  //   height: 50px;
+  // }
+  max-height: 145px;
+  margin-bottom: 40px;
+}
+.form-group {
+  position: relative;
+  //margin: 45px 0;
+  &.last-child {
+    margin-bottom: 0px;
+  }
+  // &.has-errors {
+  //   input,
+  //   textarea {
+  //     border-bottom-color: $Error;
+  //     border-bottom-width: 1px;
+  //     &:focus ~ label,
+  //     &:valid ~ label {
+  //       top: -14px;
+  //       font-size: 12px;
+  //       color: $Error;
+  //     }
+  //   }
+  //   .bar {
+  //     &:before {
+  //       background: $Error;
+  //     }
+  //   }
+  //   label {
+  //     color: $Error;
+  //   }
+  // }
+  // &.valid {
+  //   input,
+  //   textarea {
+  //     border-bottom-color: $hl-color;
+  //     border-bottom-width: 1px;
+  //     &:focus ~ label,
+  //     &:valid ~ label {
+  //       top: -14px;
+  //       font-size: 12px;
+  //       color: $hl-color;
+  //     }
+  //   }
+  //   .bar {
+  //     &:before {
+  //       background: $hl-color;
+  //     }
+  //   }
+  // }
+}
+.login-form-view-container {
+  max-width: 1007px;
+  display: flex;
+  width: 100%;
+  border-radius: 4px;
+}
+.login-brand-message {
+  flex: 1;
+  background: $primary_white url('../../assets/images/login-form-bg.png')
+    no-repeat center center / cover;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  > img {
+    margin-top: 105px;
+    margin-left: 180px;
+  }
+}
+
+.l-title {
+  font-size: 21px;
+  margin-bottom: 15px;
+  color: $Emperor;
+  text-align: center;
+}
+
+.l-s-title,
+.t-trbl {
+  text-align: center;
+  font-size: 14px;
+  color: $Silver-1;
+}
+
+.t-trbl {
+  cursor: pointer;
+  color: $Emperor;
+}
+
+.or-separator {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background: $Gallery-1;
+  margin-top: 50px;
+  margin-bottom: 36px;
+  &:after {
+    position: absolute;
+    content: 'OR';
+    width: 44px;
+    font-size: 20px;
+    background: $primary_white;
+    left: 50%;
+    top: 0px;
+    margin-left: -22px;
+    margin-top: -10px;
+    text-align: center;
+    color: $Silver-1;
+  }
+}
+
+.login-form-submit-btn {
+  font-family: 'Avenir LT Std', sans-serif;
+  display: block;
+  background-color: $Bermuda;
+  color: $primary_white;
+  margin: 25px 0px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  outline: none;
+  height: 58px;
+  font-size: 18px;
+  transition: 0.25s all ease-in-out;
+  border-radius: 4px;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: no-drop;
+  }
+}
+.form-error {
+  color: $Error;
+  margin: 20px 0px;
+  text-align: center;
+}

@@ -1,0 +1,120 @@
+@import '../../assets/scss/imports';
+
+.popup-container {
+  width: 100% !important;
+  background-color: $MineShaft-5;
+  padding: 10px 12px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  border-radius: 9px;
+  align-items: center;
+  flex-direction: column;
+  .toast-message {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    flex-direction: column;
+  }
+}
+.--icon-close {
+  position: absolute;
+  cursor: pointer;
+  padding: 4px;
+  background: $VenetianRed;
+  border: 50%;
+  border-radius: 50%;
+  font-size: 6px;
+  right: 6px;
+  top: 6px;
+}
+
+.popup {
+  display: flex;
+  z-index: 999999999999999999999999999999999;
+  min-height: 100px;
+  width: 300px;
+  background-color: $MineShaft-5;
+  position: absolute;
+  flex-direction: column;
+  padding: 5px 10px;
+  border-radius: 9px;
+  right: 20px !important;
+  bottom: 80px !important;
+  top: 0px;
+  width: 100%;
+
+  .--info {
+    //padding: 5px 0px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .--icon-close {
+      position: absolute;
+      cursor: pointer;
+      right: 0;
+      padding: 5px;
+      background: red;
+      border: 50%;
+      border-radius: 50%;
+      font-size: 9px;
+      right: -6px;
+      top: -4px;
+    }
+    .--title {
+      text-align: center;
+    }
+    .--mac {
+      width: 100% !important;
+      display: flex;
+    }
+  }
+  .--details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    //padding: 5px 0px;
+    .--prev-action {
+    }
+    .--next-action {
+    }
+    .--sla {
+    }
+  }
+  .--action {
+    padding: 5px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.close {
+  display: none;
+}
+.--title,
+.--mac,
+.--sla,
+.--next-action,
+.--details,
+.--prev-action {
+  color: $information_text;
+  margin-top: 10px;
+  line-height: 25px;
+  width: 100%;
+  h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.data {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  font-size: 40px;
+  background: red;
+  color: white;
+  z-index: 9999999999999999999999999999999;
+}

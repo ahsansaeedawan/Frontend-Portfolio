@@ -1,0 +1,88 @@
+@import '../../assets/scss/imports';
+
+.map-marker-i-window {
+  padding: 0;
+  background: $MineShaft-1;
+  width: 100%;
+  max-width: 258px;
+  position: relative;
+  .i-window-header {
+    background: rgb(23, 27, 35); /* Old browsers */
+    background: -moz-linear-gradient(
+      top,
+      rgba(23, 27, 35, 1) 0%,
+      rgba(40, 43, 50, 1) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0%, rgba(23, 27, 35, 1)),
+      color-stop(100%, rgba(40, 43, 50, 1))
+    ); /* Chrome4-9,Safari4-5 */
+    background: -webkit-linear-gradient(
+      top,
+      rgba(23, 27, 35, 1) 0%,
+      rgba(40, 43, 50, 1) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: -o-linear-gradient(
+      top,
+      rgba(23, 27, 35, 1) 0%,
+      rgba(40, 43, 50, 1) 100%
+    ); /* Opera 11.10-11.50 */
+    background: -ms-linear-gradient(
+      top,
+      rgba(23, 27, 35, 1) 0%,
+      rgba(40, 43, 50, 1) 100%
+    ); /* IE10 preview */
+    background: linear-gradient(
+      to bottom,
+      rgba(23, 27, 35, 1) 0%,
+      rgba(40, 43, 50, 1) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171b23', endColorstr='#282b32',GradientType=0 ); /* IE6-9 */
+
+    padding: 7px 30px;
+    > h3 {
+      color: $primary_white;
+      font-weight: 700;
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+  .i-window-body {
+    padding: 10px;
+    position: relative;
+
+    .i-window-row {
+      display: flex;
+      margin-bottom: 5px;
+      &:last-of-type {
+        margin-bottom: 0px;
+      }
+      .i-window-logo {
+        width: 75px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 12px;
+        color: $primary_white;
+      }
+      .i-window-detail {
+        flex: 1;
+        flex-shrink: 0;
+        > h3 {
+          font-weight: 700;
+          font-size: 15px;
+          color: $primary_white;
+        }
+        > p {
+          font-size: 12px;
+          color: $primary_white;
+        }
+      }
+    }
+  }
+}

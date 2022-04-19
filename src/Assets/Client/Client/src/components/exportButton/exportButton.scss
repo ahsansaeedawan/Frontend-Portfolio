@@ -1,0 +1,16 @@
+@import '../../assets/scss/imports';
+
+.btn-excel-export {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin-top: -10px;
+  height: 40px;
+  cursor: pointer;
+  .sf-icon {
+    font-size: 50px;
+    padding: 0px;
+    color: $primary_blue;
+  }
+}

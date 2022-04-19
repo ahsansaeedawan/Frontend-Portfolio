@@ -1,0 +1,170 @@
+@import '../../assets/scss/imports';
+
+.filter-by-alert {
+  display: flex;
+  border-top: 2px solid $Tuna;
+  border-bottom: 2px solid $Tuna;
+  border-left: 1px solid $Tuna;
+  border-right: 1px solid $Tuna;
+
+  .filter-checkbox {
+    flex: 1;
+    border-right: 1px solid $Tuna;
+    border-left: 1px solid $Tuna;
+    > input[type='checkbox'] {
+      display: none;
+      & ~ .checkbox-toggle {
+        outline: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        height: 100%;
+        background: $ShuttleGray;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+      &:checked {
+        & ~ .checkbox-toggle {
+          &.red {
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/$RedDamask+0,9c0320+100 */
+            background: $RedDamask; /* Old browsers */
+            background: -moz-linear-gradient(
+              top,
+              $RedDamask 0%,
+              $VenetianRed 100%
+            ); /* FF3.6-15 */
+            background: -webkit-gradient(
+              linear,
+              left top,
+              left bottom,
+              color-stop(0%, $RedDamask),
+              color-stop(100%, $VenetianRed)
+            ); /* Chrome4-9,Safari4-5 */
+            background: -webkit-linear-gradient(
+              top,
+              $RedDamask 0%,
+              $VenetianRed 100%
+            ); /* Chrome10-25,Safari5.1-6 */
+            background: -o-linear-gradient(
+              top,
+              $RedDamask 0%,
+              $VenetianRed 100%
+            ); /* Opera 11.10-11.50 */
+            background: -ms-linear-gradient(
+              top,
+              $RedDamask 0%,
+              $VenetianRed 100%
+            ); /* IE10 preview */
+            background: linear-gradient(
+              to bottom,
+              $RedDamask 0%,
+              $VenetianRed 100%
+            ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$RedDamask', endColorstr='$VenetianRed',GradientType=0 ); /* IE6-9 */
+          }
+          &.blue {
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/$Cerulean-1+0,1654f3+100 */
+            background: $Cerulean-1; /* Old browsers */
+            background: -moz-linear-gradient(
+              top,
+              $Cerulean-1 0%,
+              $Denim 100%
+            ); /* FF3.6-15 */
+            background: -webkit-gradient(
+              linear,
+              left top,
+              left bottom,
+              color-stop(0%, $Cerulean-1),
+              color-stop(100%, $Denim)
+            ); /* Chrome4-9,Safari4-5 */
+            background: -webkit-linear-gradient(
+              top,
+              $Cerulean-1 0%,
+              $Denim 100%
+            ); /* Chrome10-25,Safari5.1-6 */
+            background: -o-linear-gradient(
+              top,
+              $Cerulean-1 0%,
+              $Denim 100%
+            ); /* Opera 11.10-11.50 */
+            background: -ms-linear-gradient(
+              top,
+              $Cerulean-1 0%,
+              $Denim 100%
+            ); /* IE10 preview */
+            background: linear-gradient(
+              to bottom,
+              $Cerulean-1 0%,
+              $Denim 100%
+            ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$Cerulean-1', endColorstr='$Denim',GradientType=0 ); /* IE6-9 */
+          }
+          &.orange {
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/$Geebung+0,f34a16+100 */
+            background: $Geebung; /* Old browsers */
+            background: -moz-linear-gradient(
+              top,
+              $Geebung 0%,
+              $Punch 100%
+            ); /* FF3.6-15 */
+            background: -webkit-gradient(
+              linear,
+              left top,
+              left bottom,
+              color-stop(0%, $Geebung),
+              color-stop(100%, $Punch)
+            ); /* Chrome4-9,Safari4-5 */
+            background: -webkit-linear-gradient(
+              top,
+              $Geebung 0%,
+              $Punch 100%
+            ); /* Chrome10-25,Safari5.1-6 */
+            background: -o-linear-gradient(
+              top,
+              $Geebung 0%,
+              $Punch 100%
+            ); /* Opera 11.10-11.50 */
+            background: -ms-linear-gradient(
+              top,
+              $Geebung 0%,
+              $Punch 100%
+            ); /* IE10 preview */
+            background: linear-gradient(
+              to bottom,
+              $Geebung 0%,
+              $Punch 100%
+            ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$Geebung', endColorstr='$Punch',GradientType=0 ); /* IE6-9 */
+          }
+        }
+      }
+    }
+  }
+
+  .f-icon-container {
+    display: flex;
+    width: 46px;
+    height: 46px;
+    background: $MineShaft-4;
+    border-radius: 23px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    .sf-icon {
+      font-size: 33px;
+      color: $primary_white;
+      text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+      &.i-police {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .f-chkbx-lbl {
+    font-weight: 500;
+    color: $primary_white;
+    font-size: 13px;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+  }
+}

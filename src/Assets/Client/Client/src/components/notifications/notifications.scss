@@ -1,0 +1,247 @@
+@import '../../assets/scss/imports';
+
+.notifications-container {
+  position: fixed;
+  bottom: 37px;
+  left: 100%;
+  right: 0;
+
+
+  .--bell {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: $MineShaft-5;
+    width: 83px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-border-radius: 100px;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius: 100px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-radius: 100px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    .--trigger {
+      height: 60px;
+      width: 60px;
+      background: $MineShaft-7;
+      border-radius: 30px;
+      border: 2px solid $MineShaft-5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 1px 5.4px 0.6px rgba(0, 0, 0, 0.25);
+      .notification-bell {
+        color: $primary_white;
+        font-size: 32px;
+      }
+    }
+    .--dots {
+      .--dot {
+        width: 3px;
+        height: 3px;
+        background-color: $primary_white;
+        border-radius: 50%;
+        margin-top: 3px;
+        margin-left: 8px;
+        :first-child {
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+
+  .--notifications-list {
+    width: 320px;
+    height: 70vh;
+    background: $MineShaft-5;
+    border-radius: 9px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    transition: all 0.25s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+    .--list-operation {
+      z-index: 999999;
+      // height: 76px;
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 20px 23px;
+      position: fixed;
+      width: 100%;
+      justify-content: flex-end;
+      align-items: stretch;
+      background-color: $MineShaft-5;
+      .tabs-btn-container {
+        display: flex;
+        margin-top: 8px;
+        .tab-btn {
+          width: 50%;
+          min-width: 50%;
+          padding: 0px 10px;
+          outline: none;
+          border: none;
+          background: none;
+          height: 100%;
+          cursor: pointer;
+          font-size: 13px;
+          font-family: 'Avenir LT Std', sans-serif;
+          font-weight: 900;
+          color: #909090;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+        }
+        .active-tab {
+          background: rgba(0, 138, 227, 0.07);
+          color: #008ae3;
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            height: 2px;
+            left: 0px;
+            right: 0px;
+            background: $primary_blue;
+          }
+        }
+      }
+    }
+    .--inner-list {
+      padding: 40px 23px;
+      .event-search {
+        padding: 0px;
+        margin-bottom: 20px;
+        height: auto;
+      }
+    }
+
+    .--minimize {
+      border: none;
+      outline: none;
+      position: absolute;
+      top: 2px;
+      right: 13px;
+      width: 19px;
+      height: 23px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      padding: 0px;
+      &:before {
+        width: 19px;
+        height: 2px;
+        content: '';
+        background: $Silver-3;
+      }
+    }
+    .toggle-switch {
+      justify-content: space-between;
+      flex-shrink: 3;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0px;
+      }
+      .label {
+        color: $information_text !important;
+        font-size: 12px;
+        letter-spacing: 0.12px;
+      }
+    }
+  }
+
+  .--notifications {
+    margin-top: 20px;
+    li {
+      width: 100%;
+      border-radius: 9px;
+      background-color: $MineShaft-2;
+      margin-bottom: 8px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+      .--info,
+      .--details {
+        padding: 12px;
+      }
+      .--details {
+        border-top: 1px solid $MineShaft-10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .--title,
+      .--desc,
+      .--mac {
+        color: $information_text;
+      }
+      .--mac,
+      .--desc {
+        margin-top: 12px;
+        line-height: 20px;
+        font-size: 14px;
+      }
+      .--title {
+        font-size: 12px;
+        text-transform: capitalize;
+      }
+      .--time {
+        display: flex;
+        align-items: center;
+        color: $information_text;
+        font-size: 12px;
+        font-weight: 300;
+        &:before {
+          margin-right: 6px;
+        }
+      }
+      .--btn-details {
+        height: 19px;
+        padding: 0px;
+        width: 76px;
+        line-height: normal;
+        font-size: 11px;
+      }
+    }
+  }
+
+  &.--open {
+    .--notifications-list {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  .--btn-load-more {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .--notification-error {
+    text-align: center;
+    margin: 50px 0px 0px 0px;
+    color: $Silver-3;
+    font-size: 14px;
+    line-height: normal;
+    .--a-retry {
+      display: inline-block;
+      cursor: pointer;
+      color: $primary_blue;
+      width: 100%;
+    }
+  }
+}

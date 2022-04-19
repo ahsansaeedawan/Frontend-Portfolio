@@ -1,0 +1,108 @@
+@import '../../assets/scss/imports';
+.date-range-picker {
+  display: flex;
+  align-items: center;
+  .date-ranges,
+  .date-range-start,
+  .date-range-end {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .date-range-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: $Gray-4;
+    margin-right: 10px;
+  }
+
+  .insights-date {
+    font-weight: 500;
+    font-size: 15px;
+    color: $information_text;
+    padding: 7px 27px 6px 9px;
+    margin-right: 20px;
+    border-radius: 6px;
+    border: 1px solid rgba($Silver-5, 0.55);
+    cursor: pointer;
+  }
+  .react-daterange-picker {
+    .react-daterange-picker__wrapper {
+      border: none;
+    }
+    .react-daterange-picker__inputGroup,
+    .react-daterange-picker__clear-button,
+    .react-daterange-picker__range-divider {
+      display: none;
+    }
+    .react-daterange-picker__calendar-button {
+      padding: 0px;
+      outline: none;
+      .sf-icon {
+        font-size: 41px;
+        color: $Cerulean;
+      }
+    }
+  }
+  .react-daterange-picker__calendar {
+    width: 273px;
+    .react-calendar {
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0px 3px 38px 0 rgba(183, 183, 183, 0.54);
+      width: 273px;
+      .react-calendar__navigation {
+        .react-calendar__navigation__prev2-button,
+        .react-calendar__navigation__next2-button {
+          display: none;
+        }
+      }
+      .react-calendar__viewContainer {
+        padding: 0px 20px 15px 20px;
+      }
+      .react-calendar__month-view__weekdays {
+        border-bottom: 1px solid $Cerulean-2;
+        margin-bottom: 10px;
+        font-size: 12px;
+        color: $Gray-4;
+        text-transform: none;
+        .react-calendar__month-view__weekdays__weekday {
+          > abbr {
+            text-decoration: none;
+            font-size: 12px;
+          }
+        }
+      }
+
+      .react-calendar__month-view__days__day {
+        &:hover {
+          background: $PictonBlue;
+          border-radius: 50%;
+          color: $primary_white;
+        }
+      }
+      .react-calendar__tile {
+        font-size: 12px;
+        color: $CapeCod;
+      }
+      .react-calendar__tile--hasActive {
+        background: $PictonBlue;
+        border-radius: 50%;
+        color: $primary_white;
+      }
+      .react-calendar__tile--active {
+        color: $CapeCod;
+        background: rgba($PictonBlue, 0.14);
+        &.react-calendar__tile--rangeStart,
+        &.react-calendar__tile--rangeEnd {
+          background: $PictonBlue;
+          border-radius: 50%;
+          color: $primary_white;
+        }
+      }
+      .react-calendar__month-view__days__day--neighboringMonth {
+        color: $Silver-3;
+      }
+    }
+  }
+}

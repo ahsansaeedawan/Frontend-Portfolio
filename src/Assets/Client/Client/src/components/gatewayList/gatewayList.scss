@@ -1,0 +1,13 @@
+.gateway-list {
+  flex: 1;
+  flex-shrink: 0;
+  padding: 20px 18px;
+  .no-record {
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    max-width: 295px;
+    margin: 10px auto auto auto;
+    line-height: 1.4;
+  }
+}

@@ -1,0 +1,15 @@
+@import '../../assets/scss/imports';
+.circle-background,
+.circle-progress {
+  fill: none;
+}
+
+.circle-background {
+  stroke: $primary_white;
+}
+
+.circle-progress {
+  stroke: $primary_blue;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

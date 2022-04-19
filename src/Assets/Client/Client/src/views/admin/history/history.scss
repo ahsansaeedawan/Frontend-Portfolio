@@ -1,0 +1,117 @@
+@import '../../../assets/scss/imports';
+.history-content {
+  padding: 42px;
+  .history-filters {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    align-items: center;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: -32px;
+      width: calc(100% + 64px);
+      height: 1px;
+      background: rgba($CapeCod, 0.1);
+    }
+    .page-title {
+      font-size: 18px;
+      color: $CapeCod;
+    }
+
+    .history-start-date {
+      .datepicker .react-date-picker__calendar {
+        top: 20px !important;
+        left: -222px !important;
+      }
+    }
+  }
+  .history-table-container {
+    border-bottom: 1px solid rgba($CapeCod, 0.1);
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+  }
+}
+
+/* Events History Table Styles */
+.bs4-wrapper {
+  .events-history-table {
+    .user-thumbnail-td {
+      padding-top: 17px !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .data-table-name-thumbnail {
+        width: 25px;
+        height: 25px;
+        background: $primary_blue;
+        font-size: 14px;
+      }
+    }
+    .table,
+    .table-bordered {
+      border: none;
+      thead {
+        th {
+          outline: none;
+          border: none;
+          border-top: 1px solid rgba($CapeCod, 1);
+          font-size: 16px;
+          color: $panle_header_label;
+          font-weight: 500;
+          vertical-align: top;
+        }
+      }
+      tbody {
+        td {
+          border: none;
+          border-top: 1px solid rgba($CapeCod, 1);
+          font-size: 13px;
+          color: $information_text;
+          padding-top: 22px;
+          padding-bottom: 19px;
+        }
+      }
+    }
+  }
+}
+
+.response-unit-status {
+  display: flex !important;
+  width: 100%;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 12px;
+  margin: 0px !important;
+  text-transform: capitalize;
+  &.completed {
+    background: rgba($DeYork, 0.15);
+    color: $DeYork;
+  }
+  &.cancelled {
+    background: rgba($Monza, 0.15);
+    color: $Monza;
+  }
+  &.onway {
+    background: rgba($primary_blue, 0.15);
+    color: $primary_blue;
+  }
+  &.acknowledged {
+    background: rgba($primary_blue, 0.15);
+    color: $primary_blue;
+  }
+  &.arrived {
+    background-color: rgba($DeYork, 0.15);
+    color: $DeYork;
+  }
+}
+
+.response-unit-history-table {
+  td {
+    vertical-align: middle !important;
+  }
+}

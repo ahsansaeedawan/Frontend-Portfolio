@@ -1,0 +1,17 @@
+@import "../../assets/scss/imports";
+
+.close-alarm {
+  .details-form-input {
+    > label {
+      color: $Gray-5;
+      margin-bottom: 15px;
+    }
+  }
+  .detail-textarea {
+    border-radius: 9px;
+    border: solid 1px $DoveGray-1;
+    background: none;
+    margin-bottom: 15px;
+    padding: 15px 17px;
+  }
+}

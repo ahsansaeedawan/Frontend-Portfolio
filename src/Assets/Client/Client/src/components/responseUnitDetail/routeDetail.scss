@@ -1,0 +1,126 @@
+@import '../../assets/scss/imports';
+.route-detail-container {
+  > h3 {
+    font-size: 14px;
+    color: $primary_blue;
+    margin-bottom: 21px;
+  }
+  .address-detail-container {
+    height: 270px;
+    border-radius: 9px;
+    background-color: $Concrete;
+    padding: 14px 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 21px;
+    > h4 {
+      font-size: 12px;
+      color: $Gray-4;
+    }
+    .route-info {
+      height: 99px;
+      border-radius: 10px;
+      background-color: $Gallery-1;
+      padding: 10px 8px;
+      .heading {
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+        color: $Gray-4;
+        &::before {
+          content: '';
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 8px;
+          background-color: $Flamingo;
+        }
+      }
+      .initial {
+        &::before {
+          content: '';
+          background-color: $primary_blue;
+        }
+      }
+      .address {
+        max-width: 269px;
+        font-size: 14px;
+        color: $Gray-4;
+        line-height: 18px;
+        text-align: left;
+        padding: 10px 21px;
+        display: flex;
+      }
+    }
+  }
+
+  .time-details-container {
+    padding: 17px;
+    height: 132px;
+    border-radius: 9px;
+    background-color: $Concrete;
+    margin-bottom: 21px;
+    > h4 {
+      font-size: 12px;
+      color: $Gray-4;
+    }
+    .details-body {
+      display: flex;
+      flex-direction: row;
+      margin-top: 15px;
+      .time-detail {
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 154px;
+        height: 76px;
+        border-radius: 10px;
+        background-color: $Gallery-1;
+        margin-right: 8px;
+        .margin-zero {
+          margin-top: 4px;
+        }
+        &:last-child {
+          margin-right: 0px;
+        }
+        > i {
+          font-size: 20px;
+          color: $Gray-4;
+        }
+
+        > span {
+          font-size: 18px;
+          color: $Gray-4;
+          margin-top: 14px;
+        }
+      }
+    }
+  }
+  .realtime-trip-container {
+    padding: 17px;
+    height: 270px;
+    border-radius: 9px;
+    background-color: $Concrete;
+    margin-bottom: 45px;
+    > h4 {
+      font-size: 12px;
+      color: $Gray-4;
+    }
+    .media {
+      height: 212px;
+      margin-top: 12px;
+      border-radius: 10px;
+      background-color: $Gallery-1;
+      > img {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+}

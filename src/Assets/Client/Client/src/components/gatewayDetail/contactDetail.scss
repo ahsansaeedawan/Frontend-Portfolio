@@ -1,0 +1,123 @@
+@import '../../assets/scss/imports';
+.contacts {
+  background: $Dune;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 9px;
+  background: rgba($Alto, 0.03);
+  padding: 9px 7px 8px 7px;
+  position: relative;
+
+  .line {
+    position: absolute;
+    width: 1px;
+    background: rgba($Alto, 0.3);
+    top: 24px;
+    bottom: 33px;
+    left: 20px;
+  }
+
+  > span {
+    display: block;
+  }
+  .index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: $primary_white;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+    &:after {
+      content: attr(data-index);
+      min-width: 12px;
+      min-height: 12px;
+      display: inline-block;
+      border-radius: 8px;
+      background: $primary_blue;
+      color: $primary_white;
+      font-weight: normal;
+      font-size: 8px;
+      line-height: 13px;
+      margin-left: 5px;
+    }
+  }
+  .name {
+    font-size: 14px;
+    font-weight: 400;
+    color: $secondary_information_text;
+    flex-shrink: 0;
+    text-align: left;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 36px;
+    position: relative;
+    line-height: normal;
+    letter-spacing: 0.14px;
+    &:after {
+      content: attr(data-index);
+      min-width: 12px;
+      min-height: 12px;
+      display: inline-block;
+      border-radius: 8px;
+      background: $primary_blue;
+      color: $primary_white;
+      font-weight: normal;
+      font-size: 8px;
+      line-height: 12px;
+      margin-left: 8px;
+      text-align: center;
+      position: absolute;
+      bottom: 2px;
+    }
+    &:before {
+      content: '\e926';
+      vertical-align: middle;
+      position: absolute;
+      left: 5px;
+      top: 2px;
+    }
+  }
+  .number {
+    font-size: 18px;
+    color: $secondary_information_text;
+    flex-shrink: 0;
+    width: 100%;
+    position: relative;
+    padding-left: 36px;
+    line-height: normal;
+    letter-spacing: 0.18px;
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:before {
+      content: '\e943';
+      position: absolute;
+      left: 0px;
+      top: -4px;
+      font-size: 27px;
+    }
+  }
+  .icon-placement {
+    margin-right: 12px;
+    margin-left: 18px;
+    width: 28px;
+    height: 6px;
+    position: relative;
+    &:after {
+      content: url('../../assets/images/connector-icon.png');
+      position: absolute;
+      top: -3px;
+      left: 0px;
+    }
+  }
+}

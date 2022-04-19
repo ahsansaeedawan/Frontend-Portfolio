@@ -1,0 +1,22 @@
+.org-detail-row {
+  margin-bottom: 30px;
+  display: "flex";
+  &:last-of-type {
+    margin-bottom: 0px;
+  }
+}
+
+.org-column-heading {
+  width: 200px;
+  > h2 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+.org-col-content {
+  flex: 1;
+  > p {
+    font-size: 18px;
+  }
+}

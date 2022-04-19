@@ -1,0 +1,116 @@
+@import '../../assets/scss/imports';
+.vehicle-menu-list-item {
+  height: 75px;
+  padding: 11px 10px 9px 15px;
+  position: relative;
+  background: $MineShaft-2;
+  border: 1px solid $MineShaft-2;
+  color: $primary_white;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  border-radius: 9px;
+  margin-bottom: 4px;
+  justify-content: space-between;
+
+  .status {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .toggle-switch {
+    align-self: flex-end;
+    margin-top: 5px;
+    .label {
+      color: $primary_white;
+      font-size: 14px;
+      margin-right: 7px;
+    }
+    .status-toggle {
+      height: 18px;
+      input:checked + .slider {
+        border-radius: 8.5px;
+        box-shadow: 0 0 3.2px 1.8px rgba(0, 166, 81, 0.21);
+        background-color: $toogle_btn_enable_bg;
+        &:before {
+          transform: translateX(10px);
+        }
+      }
+      .slider {
+        border-radius: 8.5px;
+        box-shadow: 0 0 3.2px 1.8px rgba(237, 28, 36, 0.21);
+        background-color: $toogle_btn_disable_bg;
+        &:before {
+          width: 11px;
+          height: 11px;
+          bottom: 3.5px;
+        }
+        &.round {
+          border-radius: 18px;
+        }
+      }
+    }
+  }
+
+  .carname {
+    font-size: 16px;
+    padding-right: 30px;
+    &:after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+      background: $Crimson;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+  }
+
+  &.vehicle-online {
+    .carname::after {
+      background: $GreenHaze;
+    }
+    &:before {
+      background: $GreenHaze;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 8px;
+    background: $Crimson;
+    border-radius: 9px 0px 0px 9px;
+  }
+
+  &:hover {
+    background: $MineShaft-4;
+  }
+}
+
+.ru-request {
+  position: absolute;
+  width: 20px;
+  height: 18px;
+  font-size: 18px;
+  right: 10px;
+  top: 11px;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $Red-2;
+    top: 0px;
+    right: 0px;
+  }
+}

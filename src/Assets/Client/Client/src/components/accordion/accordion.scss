@@ -1,0 +1,126 @@
+@import '../../assets/scss/imports';
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  color: $Tundora;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  position: relative;
+
+  padding: 0px 15px;
+  height: 49px;
+  background: rgb(23, 27, 35); /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    rgba(23, 27, 35, 1) 0%,
+    rgba(40, 43, 50, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, rgba(23, 27, 35, 1)),
+    color-stop(100%, rgba(40, 43, 50, 1))
+  ); /* Chrome4-9,Safari4-5 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(23, 27, 35, 1) 0%,
+    rgba(40, 43, 50, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: -o-linear-gradient(
+    top,
+    rgba(23, 27, 35, 1) 0%,
+    rgba(40, 43, 50, 1) 100%
+  ); /* Opera 11.10-11.50 */
+  background: -ms-linear-gradient(
+    top,
+    rgba(23, 27, 35, 1) 0%,
+    rgba(40, 43, 50, 1) 100%
+  ); /* IE10 preview */
+  background: linear-gradient(
+    to bottom,
+    rgba(23, 27, 35, 1) 0%,
+    rgba(40, 43, 50, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171b23', endColorstr='#282b32',GradientType=0 ); /* IE6-9 */
+  border: none;
+
+  .accordion-label {
+    font-family: 'Avenir LT Std', sans-serif;
+    font-weight: 500;
+    color: $primary_white;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  &.accordion-center {
+    text-align: center;
+  }
+}
+
+/* Accordion Toggle Icon Class*/
+.accordion-icon {
+  &:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: $Boulder;
+    float: right;
+    margin-left: 5px;
+  }
+  &.active {
+    &:after {
+      content: '\2796'; /* Unicode character for "minus" sign (-) */
+    }
+  }
+}
+
+.a-title {
+  .a-title-center {
+    text-align: center;
+  }
+}
+
+/* Common Style for Accordion Left / Right Icon */
+.a-head-icon {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  &.left-icon {
+    left: 20px;
+    &:after {
+      content: '';
+    }
+  }
+  &.right-icon {
+    right: 20px;
+    &:after {
+      content: '';
+    }
+  }
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+// .active,
+// .accordion:hover {
+//   background-color: #ccc;
+// }
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.panel-content {
+  padding: 20px;
+}

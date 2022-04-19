@@ -1,0 +1,59 @@
+@import "../../../assets/scss/imports";
+
+.setting-panel-body {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 0px 31px 0px;
+  width: 100%;
+  .panel-body-content {
+    display: flex;
+    flex-direction: column;
+    background-color: $primary_dark;
+    .form-actions:before {
+      left: -32px;
+      right: -32px;
+    }
+    .setting-box-container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      padding: 21px 0px;
+      border-radius: 5px;
+      border: solid 2px $placeholder_text;
+      margin-bottom: 8px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+      .box-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 510px;
+        .box-icon {
+          height: 73px;
+          margin-bottom: 47px;
+        }
+        > h2 {
+          font-size: 24px;
+          font-weight: 500;
+          text-align: left;
+          color: $information_text;
+        }
+      }
+      .box-separator {
+        background-color: $placeholder_text;
+        width: 1px;
+      }
+      .box-body {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        max-width: 604px;
+        margin: 0 auto;
+        flex: 1;
+        flex-shrink: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../assets/scss/imports';
+
+.info-container {
+  max-width: 100%;
+  min-height: 76px;
+  display: flex;
+  background: $MineShaft-11;
+  border-radius: 9px;
+  margin-bottom: 10px;
+}
+
+.info-icon {
+  width: 44px;
+  background: $primary_blue;
+  display: flex;
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+  align-items: center;
+  justify-content: center;
+  color: $primary_white;
+  font-size: 23px;
+  flex-shrink: 0;
+}
+
+.verified-info-message {
+  color: $Silver-4;
+  padding: 16px 32px 15px 11px;
+  flex: 1;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  line-height: 1.3;
+}

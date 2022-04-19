@@ -1,0 +1,28 @@
+@import '../../assets/scss/imports';
+
+.btn-verify {
+  bottom: 0px;
+  position: fixed;
+  background: $Red;
+  border: none;
+  display: block;
+  width: 100%;
+  height: 58px;
+  font-weight: bold;
+  color: $primary_white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  .i-police {
+    margin-right: 10px;
+    margin-bottom: 9px;
+    font-size: 28px;
+  }
+  &:disabled {
+    opacity: 0.4;
+    cursor: no-drop;
+  }
+}

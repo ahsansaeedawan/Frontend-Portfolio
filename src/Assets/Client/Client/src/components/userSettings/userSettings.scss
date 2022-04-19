@@ -1,0 +1,81 @@
+@import '../../assets/scss/imports';
+.user-settings {
+  background: $Mako;
+  height: 58px;
+  border: 1px solid $Tuna;
+  margin: 20px 0px 0px 0px;
+  flex-shrink: 0;
+  .user-settings-btn {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 9px 54px;
+    align-items: center;
+    min-width: 0px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+
+    .i-settings {
+      width: 31px;
+      height: 31px;
+      display: flex;
+      min-width: 0px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 26px;
+      background: $Gray-2;
+      color: $primary_white;
+      font-size: 19px;
+      margin-right: 36px;
+    }
+
+    .user-settings-label-cnt {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      align-items: flex-start;
+      min-width: 0px;
+      > span {
+        font-size: 15px;
+        color: $Gray-2;
+        &.highlight {
+          color: $primary_white;
+          font-size: 17px;
+        }
+      }
+    }
+
+    &:after {
+      font-family: 'safecitydashboardicons' !important;
+      font-size: 16px;
+      content: '\e905';
+      transform: rotate(270deg);
+      color: $Gray-2;
+    }
+  }
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+  z-index: 9999;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.menu-user-avatar {
+  max-width: 39px;
+  max-height: 39px;
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  margin-right: 18px;
+}

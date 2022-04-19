@@ -1,0 +1,68 @@
+@import '../../assets/scss/imports';
+.react-select__single-value {
+  color: #888888 !important;
+}
+.sla-container {
+  .modal-title {
+    font-size: 24px;
+    margin: 31px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #bfbfbf;
+  }
+}
+
+.col-container {
+  display: flex;
+  border-bottom: 1px solid $Silver-4;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 16px 0 15px 0;
+
+  .col-title {
+    font-size: 18px;
+    color: $information_text;
+    flex: 3;
+    display: flex;
+  }
+  .col-action {
+    display: flex;
+    flex: 3;
+  }
+  .col-toggle {
+    justify-content: flex-end;
+    .switch {
+      height: 18px;
+      .slider {
+        &::before {
+          height: 13px;
+          width: 12px;
+          left: 2px;
+          top: 2.4px;
+        }
+      }
+    }
+  }
+
+  .col-radiobuttons {
+    justify-content: flex-end;
+    .radio-container {
+      font-size: 20px;
+      margin-bottom: 0px !important;
+      color: $Gray-4;
+      .radio-checkbox {
+        color: $Gray-4;
+      }
+      &:nth-child(1){
+        margin-right: 30px;
+      }
+      input {
+        &:checked ~ .radio-checkbox {
+          color: $GreenHaze;
+        }
+      }
+    }
+  }
+}

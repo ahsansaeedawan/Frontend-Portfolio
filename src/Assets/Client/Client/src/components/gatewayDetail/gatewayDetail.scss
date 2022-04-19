@@ -1,0 +1,317 @@
+@import '../../assets/scss/imports';
+.gateway-detail {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 386px;
+  // width: 20%;
+  // max-width: 398px;
+  width: 768px;
+  z-index: 98;
+  -webkit-box-shadow: 5px 0px 10px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 0px 10px 2px rgba(0, 0, 0, 0.5);
+
+  //padding: 25px 18px 0px 18px;
+  box-shadow: -5.9px 3.8px 30.4px 1.6px var(--black-57);
+  background-color: $MineShaft-5;
+
+  .gateway-detail-map {
+    height: 351px;
+    padding: 25px 18px 0px 18px;
+  }
+
+  .gateway-subscription-plan {
+    min-height: 88px;
+    width: 350px;
+    border-radius: 9px;
+    box-shadow: 0 0 7px 0 rgba(255, 255, 255, 0.19);
+    padding: 9px 18px;
+    color: $primary_blue;
+    background: $TropicalBlue url('/assets/images/subscription-bg.svg')
+      no-repeat right -25px bottom -10px;
+    position: relative;
+    .addon-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 7px;
+      .addon {
+        height: 21px;
+        background: rgba($primary_blue, 0.14);
+        border-radius: 6px;
+        margin-right: 8px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0px 5px;
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
+    }
+
+    &:after {
+      content: '\e94b';
+      position: absolute;
+      right: 17px;
+      top: 12px;
+      font-size: 40px;
+    }
+    h4 {
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    h3 {
+      font-size: 16px;
+      line-height: 1.13;
+      margin-top: 5px;
+    }
+  }
+
+  .menu-tabs,
+  .detail-cnt {
+    padding: 0px 18px;
+  }
+
+  .detail-cnt {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .details {
+    width: 389px;
+  }
+
+  .gateway-operations {
+    width: 332px;
+  }
+
+  .menu-tabs {
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+
+  .operations-panel {
+    background: none;
+    .action-form {
+      padding: 10px 18px 0px 18px !important;
+      .detail-fields-container {
+        padding-left: 33px;
+        .radio-container {
+          margin-bottom: 30px;
+          .radio-checkbox {
+            top: -1px;
+          }
+          &:last-child {
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
+  }
+
+  .operations-accordion-icon {
+    color: $Gallery-2;
+    line-height: 2.86;
+    letter-spacing: 0.14px;
+    font-size: 14px;
+    font-weight: 500;
+    background: none;
+    padding: 0px 18px;
+    &.active {
+      &:before {
+        content: '\e940';
+      }
+    }
+    &:before {
+      display: inline-block;
+      content: '\e941';
+      font-size: 19px;
+      margin-right: 17px;
+      vertical-align: middle;
+      margin-top: -3px;
+    }
+  }
+
+  .accordion {
+    height: 38px;
+    .accordion-label {
+      font-size: 15px;
+    }
+  }
+  .i-chevron-down-after {
+    &:after {
+      content: $icon-down-chevron;
+      float: right;
+      font-size: 15px;
+      color: $primary_white;
+      text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+      transform: rotate(180deg);
+    }
+    &.active {
+      &:after {
+        transform: rotate(0deg);
+        content: $icon-down-chevron;
+      }
+    }
+  }
+
+  .panel-content {
+    padding: 0px;
+  }
+}
+
+.detail-close {
+  position: fixed;
+  right: 5px;
+  top: 5px;
+  z-index: 1000000000000000;
+  cursor: pointer;
+}
+
+.t-icon-container {
+  display: flex;
+  width: 46px;
+  height: 46px;
+  border-radius: 23px;
+  background: $MineShaft-6;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;
+  .sf-icon {
+    font-size: 31px;
+  }
+  .i-alert {
+    margin-bottom: -1px;
+  }
+}
+
+.detail-box {
+  padding: 13px 17px 19px 18px;
+  width: 100%;
+  border-radius: 9px;
+  background-color: rgba($Alto, 0.04);
+  margin-top: 20px;
+
+  > h3 {
+    font-size: 12px;
+    text-align: left;
+    color: $panle_header_label;
+    display: block;
+  }
+  > p {
+    font-size: 14px;
+    text-align: left;
+    color: $Mercury-1;
+  }
+
+  &:first-of-type {
+    margin-top: 0px;
+  }
+}
+
+.message {
+  padding: 0px 18px;
+}
+
+.gateway-details-panel {
+  border-radius: 9px;
+  box-shadow: 0px 1px 5.4px 0.6px rgba(0, 0, 0, 0.25);
+  background-color: $MineShaft-7;
+  height: calc(100% - 20px);
+  padding-bottom: 60px;
+  overflow: hidden;
+  .panel-heading {
+    padding: 19px 18px;
+    border-bottom: 1px solid rgba($Silver-4, 0.15);
+    letter-spacing: 0.2px;
+    font-size: 20px;
+    color: $panle_header_label;
+  }
+  .panel-body {
+    padding: 20px 18px;
+  }
+}
+
+.operations-wizard-container {
+  .wizard-panel {
+    position: relative;
+    padding-left: 47px;
+    min-height: 115px;
+
+    &.complete {
+      &:after,
+      &:before {
+        background: $primary_blue;
+        border-color: $primary_blue;
+      }
+    }
+
+    &.current {
+      &:after {
+        background: $primary_blue;
+      }
+      &:before {
+        border: none;
+        content: url('/assets/images/current-step.svg');
+        left: -1px;
+      }
+    }
+
+    &:last-of-type {
+      &:after {
+        content: none;
+      }
+    }
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+    }
+    &:before {
+      width: 35px;
+      height: 35px;
+      border: 2px solid $Nobel;
+      background: $MineShaft-7;
+      z-index: 1;
+      border-radius: 50%;
+      top: 0px;
+      left: 0px;
+    }
+    &:after {
+      top: 0px;
+      bottom: 0px;
+      width: 1px;
+      background: $Nobel;
+      left: 17px;
+    }
+    .wizard-panel-heading {
+      font-size: 18px;
+      padding-top: 11px;
+      letter-spacing: 0.18px;
+      color: $information_text;
+    }
+    .wizard-panel-body {
+      padding: 24px 0px;
+    }
+    .step-count {
+      position: absolute;
+      right: -10px;
+      top: -3px;
+      font-size: 11px;
+      letter-spacing: 0.11px;
+      color: $panle_header_label;
+      font-stretch: normal;
+      line-height: normal;
+    }
+  }
+}

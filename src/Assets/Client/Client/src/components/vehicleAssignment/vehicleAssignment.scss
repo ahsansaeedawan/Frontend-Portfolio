@@ -1,0 +1,216 @@
+@import '../../assets/scss/imports';
+
+.vehicle-assignment {
+  .no-vehicle-nearby {
+    text-align: center;
+    color: white;
+  }
+
+  .title {
+    color: $Silver-4;
+    font-size: 18px;
+    line-height: 1.01;
+  }
+
+  .vehicle-list-item {
+    margin-bottom: 13px;
+    border-radius: 8px;
+    background-color: rgba($Gallery, 0.08);
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  .vehicle-info {
+    height: 31px;
+    padding: 0px 14px;
+    display: flex;
+    align-items: center;
+
+    .vehicle-icon {
+      flex-shrink: 0;
+    }
+
+    .vehicle-name {
+      font-size: 12px;
+      line-height: 1.13;
+      color: $Silver-4;
+      margin-left: 14px;
+      margin-right: 18px;
+      margin-bottom: -1px;
+      flex: 1;
+      flex-shrink: 0;
+    }
+  }
+
+  .vehicle-status {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: transparent;
+    flex-shrink: 0;
+    &.vehicle-online {
+      background: $GreenHaze;
+    }
+    &.vehicle-offline {
+      background: $Red-2;
+    }
+  }
+
+  .vehicle-analytics {
+    height: 32px;
+    display: flex;
+
+    .vehicle-duration {
+      flex: 1 1 0;
+      display: flex;
+      align-items: center;
+      background: rgba($Gallery, 0.08);
+      margin-right: 1px;
+      padding: 0px 14px;
+      &:last-child {
+        margin-right: 0px;
+        margin-left: 1px;
+      }
+      > span {
+        font-size: 15px;
+        line-height: 0.91;
+        color: rgba(255, 255, 255, 0.83);
+        margin-left: 15px;
+      }
+      > img {
+        height: 16px;
+        width: 16px;
+      }
+    }
+  }
+  .vehicle-cellno {
+    height: 32px;
+    display: flex;
+    margin-top: 1px;
+    .vehicle-contact {
+      flex: 1 1 0;
+      display: flex;
+      align-items: center;
+      background: rgba($Gallery, 0.08);
+      padding: 0px 14px;
+      > span {
+        font-size: 15px;
+        line-height: 0.91;
+        color: rgba(255, 255, 255, 0.83);
+      }
+      .number {
+        font-size: 15px;
+        color: $Mercury-1;
+        flex-shrink: 0;
+        width: 100%;
+        position: relative;
+        padding-left: 31px;
+        line-height: normal;
+        letter-spacing: 0.18px;
+        &:before {
+          content: '\e943';
+          position: absolute;
+          left: 0px;
+          top: -1px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .vehicle-actions {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 14px;
+    .vehicle-status-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        font-size: 11px;
+        color: $primary_white;
+      }
+      .vehicle-status {
+        height: 5px;
+        width: 5px;
+        margin-left: 5px;
+        margin-right: 10px;
+      }
+      .vehicle-current-status {
+        width: 51px;
+        height: 17px;
+        background-color: $Anakiwa;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px;
+        font-size: 9px;
+        color: $primary_blue;
+        &.waiting-status {
+          color: $Silver-4;
+          background-color: $Emperor-2;
+        }
+      }
+    }
+
+    .btn-action {
+      width: 64px;
+      height: 19px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      color: $primary_white;
+      font-size: 11px;
+      cursor: pointer;
+      outline: none;
+      border-radius: 5px;
+      border: none;
+      &.active-btn {
+        background: $primary_blue;
+      }
+      &:disabled,
+      &.disabled-btn,
+      &.unassign-btn {
+        background: rgba($SliverChalice, 0.51);
+      }
+      &:disabled {
+        cursor: no-drop;
+      }
+    }
+  }
+
+  .toggle-switch {
+    .label {
+      color: $primary_white;
+      font-size: 14px;
+      margin-right: 18px;
+    }
+    .status-toggle {
+      height: 18px;
+      input:checked + .slider {
+        border-radius: 8.5px;
+        box-shadow: 0 0 3.2px 1.8px rgba(0, 166, 81, 0.21);
+        background-color: $GreenHaze;
+      }
+      .slider {
+        border-radius: 8.5px;
+        box-shadow: 0 0 3.2px 1.8px rgba(237, 28, 36, 0.21);
+        background-color: $radio_btn_bg;
+        &:before {
+          width: 11px;
+          height: 11px;
+          bottom: 3px;
+        }
+        &.round {
+          border-radius: 18px;
+        }
+      }
+    }
+  }
+}
