@@ -1,1 +1,0 @@
-export { default as ResponseUnitTrasnferNotification } from "./ResponseUnitTrasnferNotification";
