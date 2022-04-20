@@ -15,8 +15,20 @@ html {
 }
 
 .purple {
-  /* color: var(--imp-text-color) !important; */
   color: white !important;
+  margin-right: 3px !important;
+}
+
+.orange {
+  color: #f26224 !important;
+  margin-right: 3px !important;
+}
+.red {
+  color: maroon !important;
+  margin-right: 3px !important;
+}
+.blue {
+  color: darkblue !important;
   margin-right: 3px !important;
 }
 
@@ -245,7 +257,7 @@ button:focus {
   }
 }
 #tsparticles {
-  position: fixed !important;
+  /* position: fixed !important; */
   background-repeat: no-repeat !important;
   background-size: cover !important;
   width: 100%;
@@ -577,6 +589,7 @@ button:focus {
   transform: scale(1.05) !important;
   overflow: hidden !important;
   border: 2.2px solid rgba(1, 1, 1, 0.883) !important;
+  color: orange;
 }
 .tech-icon-images {
   padding: 20px !important;

@@ -3,8 +3,19 @@ import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 // import Github from "./Github";
 // import Techstack from "./Techstack";
-import Aboutcard from "./AboutCard";
-import laptopImg from "../../Assets/about.png";
+import SystemsAboutCard from "./SystemsAboutCard";
+import systems from "../../Assets/systems.jpg";
+import zigron from "../../Assets/Zigron.png";
+import ilogics from "../../Assets/ilogics.png";
+import megait from "../../Assets/megait.jpg";
+import ZigronAboutCard from "./ZigronAboutCard";
+import ILogicsAboutCard from "./ILogicsAboutCard";
+import MegaITAboutCard from "./MegaITAboutCard";
+import Cerilogic from "../../Assets/Cerilogics.jpg";
+import Cermegait from "../../Assets/Cermegait.jpeg";
+import CertZigron from "../../Assets/CeriZigron.jpg";
+
+
 // import Toolstack from "./Toolstack";
 
 function Experience() {
@@ -21,18 +32,29 @@ function Experience() {
               paddingBottom: "50px",
             }}
           >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              <strong className="purple"> Systems Limited</strong>
+            <h1
+              style={{
+                fontSize: "2.1em",
+                paddingBottom: "20px",
+                color: "#f26224",
+              }}
+            >
+              <strong className="orange"> Systems Limited</strong>
               ,G11, Islamabad, Pakistan
             </h1>
-            <Aboutcard />
+            <SystemsAboutCard />
           </Col>
           <Col
             md={5}
             style={{ paddingTop: "120px", paddingBottom: "50px" }}
             className="about-img"
           >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+            <img
+              src={systems}
+              alt="about"
+              className="img-fluid"
+              style={{ borderRadius: "8px 8px 8px 8px" }}
+            />
           </Col>
         </Row>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
@@ -48,14 +70,27 @@ function Experience() {
               <strong className="purple"> Zigron</strong>
               ,Gulberg, Islamabad, Pakistan
             </h1>
-            {/* <Aboutcard /> */}
+            <ZigronAboutCard />
           </Col>
           <Col
             md={5}
             style={{ paddingTop: "120px", paddingBottom: "50px" }}
             className="about-img"
           >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+            <a
+              download={`${CertZigron}`}
+              href={CertZigron}
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Download Certificate / Experience Letter"
+            >
+              <img
+                src={zigron}
+                alt="about"
+                className="img-fluid"
+                style={{ borderRadius: "8px 8px 8px 8px" }}
+              />
+            </a>
           </Col>
         </Row>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
@@ -71,14 +106,27 @@ function Experience() {
               <strong className="purple"> I-Logics</strong>
               ,Bluearea, Islamabad, Pakistan
             </h1>
-            {/* <Aboutcard /> */}
+            <ILogicsAboutCard />
           </Col>
           <Col
             md={5}
             style={{ paddingTop: "120px", paddingBottom: "50px" }}
             className="about-img"
           >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+            <a
+              download={`${Cerilogic}`}
+              href={Cerilogic}
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Download Certificate / Experience Letter"
+            >
+              <img
+                src={ilogics}
+                alt="about"
+                className="img-fluid"
+                style={{ borderRadius: "8px 8px 8px 8px" }}
+              />
+            </a>
           </Col>
         </Row>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
@@ -94,14 +142,27 @@ function Experience() {
               <strong className="purple"> Mega IT Solution </strong>
               ,Rehmanabad, Rawalpindi, Pakistan
             </h1>
-            {/* <Aboutcard /> */}
+            <MegaITAboutCard />
           </Col>
           <Col
             md={5}
             style={{ paddingTop: "120px", paddingBottom: "50px" }}
             className="about-img"
           >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+            <a
+              download={`${Cermegait}`}
+              href={Cermegait}
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Download Certificate / Experience Letter"
+            >
+              <img
+                src={megait}
+                alt="about"
+                className="img-fluid"
+                style={{ borderRadius: "8px 8px 8px 8px" }}
+              />
+            </a>
           </Col>
         </Row>
       </Container>

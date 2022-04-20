@@ -1,13 +1,14 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 
-function AboutCard() {
+function SystemsAboutCard(props) {
   return (
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
             <strong className="purple">
+
               Junior Consultant (Microsoft Dynamics 365 Commerce / ReactJs /
               Typescript)
             </strong>
@@ -57,4 +58,4 @@ function AboutCard() {
   );
 }
 
-export default AboutCard;
+export default SystemsAboutCard;
